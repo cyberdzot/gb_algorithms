@@ -75,19 +75,19 @@ public class DoubleLinkedList {
      * Разворот двусвязного списка через цикл
      */
     public void revert() {
-        Node currentNode = head;
-        while (currentNode != null) {
-            Node next = currentNode.next;
-            Node previous = currentNode.prev;
-            currentNode.next = previous;
-            currentNode.prev = next;
-            if (previous == null) {
-                tail = currentNode;
+        Node current_node = head; // начинаем с головы
+        while (current_node != null) {
+            Node next = current_node.next; // кешируем соседние ноды, чтобы не сломался порядок перезаписи
+            Node prev = current_node.prev;
+            current_node.next = prev; // меняем местами соседей
+            current_node.prev = next;
+            if (prev == null) {
+                tail = current_node;
             }
             if (next == null) {
-                head = currentNode;
+                head = current_node;
             }
-            currentNode = next;
+            current_node = next; // переход на следующую ноду
         }
     }
 }
