@@ -1,6 +1,6 @@
 package Homework02;
 
-public class Task_01 {
+public class Main {
     public static void main(String[] args) {
         int[] my_array = new int[] { 1, 8, 5, 2 };
         heapSort(my_array);

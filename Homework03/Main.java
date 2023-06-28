@@ -1,6 +1,6 @@
 package Homework03;
 
-public class Task_01 {
+public class Main {
     public static void main(String[] args) {
         DoubleLinkedList dll = new DoubleLinkedList();
         dll.addNext(3);
